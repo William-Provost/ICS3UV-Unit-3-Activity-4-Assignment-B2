@@ -6,8 +6,8 @@
  */
 
 // variables
-let basePrice: number = 25000.0;
-let totalCost: number = basePrice;
+const basePrice: number = 25000.0;
+let totalCost1: number = basePrice;
 
 let addFloorMats: string = "";
 let addNavigation: string = "";
@@ -26,22 +26,22 @@ console.log("Base Price                              " + basePrice.toFixed(2));
 // check each feature
 if (addFloorMats.toLowerCase() === "yes") {
   console.log("Floor mats                              500.00");
-  totalCost += 500;
+  totalCost1 += 500;
 }
 
 if (addNavigation.toLowerCase() === "yes") {
   console.log("Navigation system                      1000.00");
-  totalCost += 1000;
+  totalCost1 += 1000;
 }
 
 if (addHeatedSeats.toLowerCase() === "yes") {
   console.log("Heated leather seats                    500.00");
-  totalCost += 500;
+  totalCost1 += 500;
 }
 
 if (addWarranty.toLowerCase() === "yes") {
   console.log("5-Year extended warranty               2500.00");
-  totalCost += 2500;
+  totalCost1 += 2500;
 }
 
 // tax calculation
@@ -49,7 +49,7 @@ let taxAmount: number = totalCost * 0.13;
 console.log("13% Taxes                              " + taxAmount.toFixed(2));
 
 // final cost
-let finalCost: number = totalCost + taxAmount;
+const finalCost: number = totalCost + taxAmount;
 console.log("Final cost of car                      " + finalCost.toFixed(2));
 
 console.log("\nDone.");

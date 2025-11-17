@@ -13,18 +13,19 @@ import (
 )
 
 func main() {
-	// variable declaration
-	var basePrice float64 = 25000.00
-	var totalCost float64 = basePrice
+	// Base price
+	basePrice := 25000.00
+	totalCost := basePrice
 
-	var addFloorMats string = ""
-	var addNavigation string = ""
-	var addHeatedSeats string = ""
-	var addWarranty string = ""
+	// Feature choices
+	var addFloorMats string
+	var addNavigation string
+	var addHeatedSeats string
+	var addWarranty string
 
 	reader := bufio.NewReader(os.Stdin)
 
-	// input feature choices
+	// Input feature choices
 	fmt.Print("Would you like floor mats for $500? (yes/no) ")
 	addFloorMats, _ = reader.ReadString('\n')
 	addFloorMats = strings.TrimSpace(addFloorMats)
@@ -41,10 +42,10 @@ func main() {
 	addWarranty, _ = reader.ReadString('\n')
 	addWarranty = strings.TrimSpace(addWarranty)
 
-	// output base
+	// Output base
 	fmt.Printf("Base Price                              %.2f\n", basePrice)
 
-	// check each feature
+	// Add features
 	if strings.ToLower(addFloorMats) == "yes" {
 		fmt.Println("Floor mats                              500.00")
 		totalCost += 500
@@ -65,11 +66,11 @@ func main() {
 		totalCost += 2500
 	}
 
-	// tax
+	// Tax
 	taxAmount := totalCost * 0.13
 	fmt.Printf("13%% Taxes                              %.2f\n", taxAmount)
 
-	// final total
+	// Final total
 	finalCost := totalCost + taxAmount
 	fmt.Printf("Final cost of car                      %.2f\n", finalCost)
 
