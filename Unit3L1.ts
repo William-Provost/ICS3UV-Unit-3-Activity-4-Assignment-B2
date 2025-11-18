@@ -40,11 +40,11 @@ if (addWarranty.toLowerCase() === "yes") {
 }
 
 // tax calculation
-const taxAmount: number = totalCost * 0.13;
+const taxAmount: number = totalCost1 * 0.13;
 console.log("13% Taxes                              " + taxAmount.toFixed(2));
 
 // final cost
-const finalCost: number = totalCost + taxAmount;
+const finalCost: number = totalCost1 + taxAmount;
 console.log("Final cost of car                      " + finalCost.toFixed(2));
 
 console.log("\nDone.");
