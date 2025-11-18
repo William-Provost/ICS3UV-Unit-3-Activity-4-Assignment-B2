@@ -9,16 +9,11 @@
 const basePrice: number = 25000.0;
 let totalCost1: number = basePrice;
 
-let addFloorMats: string = "";
-let addNavigation: string = "";
-let addHeatedSeats: string = "";
-let addWarranty: string = "";
-
 // ask for features
-addFloorMats = prompt("Would you like floor mats for $500? (yes/no)") || "no";
-addNavigation = prompt("Would you like a navigation system for $1000? (yes/no)") || "no";
-addHeatedSeats = prompt("Would you like heated leather seats for $500? (yes/no)") || "no";
-addWarranty = prompt("Would you like a 5-year extended warranty for $2500? (yes/no)") || "no";
+const addFloorMats: string = prompt("Would you like floor mats for $500? (yes/no)") || "no";
+const addNavigation: string = prompt("Would you like a navigation system for $1000? (yes/no)") || "no";
+const addHeatedSeats: string = prompt("Would you like heated leather seats for $500? (yes/no)") || "no";
+const addWarranty: string = prompt("Would you like a 5-year extended warranty for $2500? (yes/no)") || "no";
 
 // output base price
 console.log("Base Price                              " + basePrice.toFixed(2));
@@ -45,7 +40,7 @@ if (addWarranty.toLowerCase() === "yes") {
 }
 
 // tax calculation
-let taxAmount: number = totalCost * 0.13;
+const taxAmount: number = totalCost * 0.13;
 console.log("13% Taxes                              " + taxAmount.toFixed(2));
 
 // final cost
